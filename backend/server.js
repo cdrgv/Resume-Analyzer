@@ -13,13 +13,8 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (mobile apps, etc.)
-    if (!origin) return callback(null, true);
-    // Allow localhost on any port
-    if (origin.match(/^http:\/\/localhost:\d+$/)) return callback(null, true);
-    return callback(new Error('Not allowed by CORS'));
-  },
+  origin: "https://resume-analyzer-r5fx.onrender.com",
+  origin: true, // Allow all origins
   credentials: true
 }));
 app.use(express.json());
