@@ -11,7 +11,7 @@ const Analyze = () => {
   const [progress, setProgress] = useState(0);
   const fileRef = useRef();
   const navigate = useNavigate();
-  const { user, logout } = useAuth();
+  const { logout } = useAuth();
 
   const handleFile = (f) => {
     if (!f) return;
@@ -64,7 +64,6 @@ const Analyze = () => {
       <nav className="navbar">
         <div className="nav-brand"><span className="brand-icon">⚡</span><span>ResumeAI</span></div>
         <div className="nav-links">
-          <Link to="/" className="btn-ghost small">🏠 Home</Link>
           <Link to="/dashboard" className="btn-ghost small">← Dashboard</Link>
           <button onClick={logout} className="btn-ghost small">Logout</button>
         </div>
